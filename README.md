@@ -1,2 +1,3 @@
 # TicTacToe
- Just a console Tic Tac Toe
+
+A console Tic Tac Toe with an AI using minimax with Alpha–Beta pruning
