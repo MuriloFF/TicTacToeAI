@@ -50,6 +50,15 @@ public class TicTacToe {
 		game[position / 3][position % 3] = null;
 	}
 
+	// It changes between player and AI as the first player
+	public void changeFirstPlayer() {
+		setaI(getaI() == 1 ? 2 : 1);
+	}
+
+	public boolean isAIsTurn() {
+		return getPlayerThisRound() == getaI() && !isGameOver();
+	}
+
 	public void aIsTurn() throws TicTacToeException {
 		Integer bestScore = Integer.MIN_VALUE;
 		Integer position = 0;

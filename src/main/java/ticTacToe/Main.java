@@ -25,7 +25,7 @@ public class Main {
 
 				// AI's turn
 				try {
-					if (ticTacToe.getPlayerThisRound() == ticTacToe.getaI() && !ticTacToe.isGameOver())
+					if (ticTacToe.isAIsTurn())
 						ticTacToe.aIsTurn();
 				} catch (TicTacToeException e) {
 					System.err.println(e.getException());
@@ -48,7 +48,8 @@ public class Main {
 						System.out.println("Congratulations! we tied!!");
 
 					// Change current player
-					ticTacToe.setaI(ticTacToe.getaI() == 1 ? 2 : 1);
+					ticTacToe.changeFirstPlayer();
+
 					// Start a new game
 					String firstPlayer = ticTacToe.getaI() == 1 ? "the AI" : "you";
 					System.out.println("Let's play another game! This time " + firstPlayer + " will start");
